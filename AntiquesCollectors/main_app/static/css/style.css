@@ -39,13 +39,14 @@
     padding: 0;
     position: relative;
     background-size: cover;
-    max-width: 100%;
-    height: auto;
+    max-width: auto;
+    max-height: 100%;
 }
 .toppage img {
     width: 100%;
+    background-repeat: no-repeat;
     background-size: cover;
-    height: 300px;
+    height: 400px;
 }
 
 .toppageText {
