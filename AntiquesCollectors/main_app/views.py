@@ -1,18 +1,25 @@
 from django.shortcuts import render
+from django.contrib.auth.forms import UserCreationForm
 from django.http import HttpResponse
 from .models import Subscriber
 
-def index(request):
-    submitbutton= request.POST.get("submit")
-    fullname=''
-    emailvalue=''
-    form= UserForm(request.POST or None)
+def signup(request):
+  error_message = ''
+  if request.method == 'POST':
+    # This is how to create a 'user' form object
+    # that includes the data from the browser
+    form = UserCreationForm(request.POST)
     if form.is_valid():
-        fullname= form.cleaned_data.get("fullname"),
-        emailvalue= form.cleaned_data.get("email")
-    context= {'form': form, 'fullname': fullname,
-              'submitbutton': submitbutton, 'emailvalue':emailvalue}
-    return render(request, 'base.html', context)
+      # This will add the user to the database
+      user = form.save()
+      # This is how we log a user in via code
+
+    else:
+      error_message = 'Invalid sign up - try again'
+  # A bad POST or a GET request, so render signup.html with an empty form
+  form = UserCreationForm()
+  context = {'form': form, 'error_message': error_message}
+  return render(request, 'base.html', context)
 
 def home(request):
     return render(request, 'base.html')

@@ -6,4 +6,4 @@ class Subscriber(models.Model):
     email= models.EmailField()
 
     def __str__(self):
-        return self.full_name
+        return f"{self.full_name}{self.email}"
