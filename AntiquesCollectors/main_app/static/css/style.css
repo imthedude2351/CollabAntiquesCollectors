@@ -107,8 +107,9 @@
 .testimonial-group > .row > .col-xs-4, .col-md-6 {
     display: inline-block;
     float: none;
-    padding: 15px;
-    margin: 10px;
+    padding: 0px;
+    margin: 0px 20px 0px 20px;
+    border-radius: 50px;
 }
 
 .navbar {
@@ -116,12 +117,12 @@
 }
   
   /* Decorations */
-.col-xs-4, .col-md-6 { 
-    color: #fff; 
-    font-size: 48px; 
-    padding-bottom: 20px; 
-    padding-top: 18px; 
-}
+/* .col-xs-4, .col-md-6 {  */
+    /* color: #fff;  */
+    /* font-size: 48px;  */
+    /* padding-bottom: 20px;  */
+    /* padding-top: 18px;  */
+/* } */
   /* .col-xs-4:nth-child(3n+1) { background: #c69; }
   .col-xs-4:nth-child(3n+2) { background: #9c6; }
   .col-xs-4:nth-child(3n+3) { background: #69c; } */
@@ -141,6 +142,7 @@
 .shopContainer {
 
     background: #9EAA8C;
+    padding-bottom: 25px;
 }
 
 h4 {
@@ -151,4 +153,13 @@ h4 {
 .socialMedia {
     width: 50px;
     height: 50px;
+}
+
+.dashHead {
+    padding-top: 20px;
+}
+
+.tablesc {
+    overflow:scroll;
+    height:200px;
 }
