@@ -30,6 +30,48 @@
 .work__img img:hover{
     transform: scale(1.1);
 }
+
+.toppage {
+    position: relative;
+    background-size: cover;
+    max-width: 100%;
+    height: auto;
+}
+.toppage img {
+    width: 100%;
+    background-size: cover;
+    height: 300px;
+}
+
+.toppageText {
+    position: absolute;
+    top: 25%;
+    padding: 20px;
+}
+
+.threeCircles {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+
+
+
+.containertopImage {
+    position: relative;
+}
+.containerText {
+    position: absolute;
+}
+
+
+
+
+
+
+
+
 @media screen and (min-width: 1024px){
     .bd-grid{
       margin-left: auto;
