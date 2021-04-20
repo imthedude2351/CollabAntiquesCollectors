@@ -1,3 +1,7 @@
+.body {
+    font-family: open
+}
+
 .bd-grid{
     max-width: 1024px;
     display: grid;
@@ -32,6 +36,7 @@
 }
 
 .toppage {
+    padding: 0;
     position: relative;
     background-size: cover;
     max-width: 100%;
@@ -45,7 +50,7 @@
 
 .toppageText {
     position: absolute;
-    top: 25%;
+    top: 1%;
     padding: 20px;
 }
 
@@ -55,6 +60,13 @@
     border-radius: 50%;
 }
 
+.circleText {
+    text-align: center;
+}
+
+.toppageText p {
+    width: 50%;
+}
 
 
 
@@ -97,7 +109,10 @@
     float: none;
     padding: 15px;
     margin: 10px;
+}
 
+.navbar {
+    background: #9EAA8C;
 }
   
   /* Decorations */
@@ -110,3 +125,30 @@
   /* .col-xs-4:nth-child(3n+1) { background: #c69; }
   .col-xs-4:nth-child(3n+2) { background: #9c6; }
   .col-xs-4:nth-child(3n+3) { background: #69c; } */
+
+.get {
+    /* 2C4161 */
+    color: white;
+    background: #2C4161;
+    padding: 20px;
+    
+}
+
+.bodyText {
+    color: #595959;
+}
+
+.shopContainer {
+
+    background: #9EAA8C;
+}
+
+h4 {
+    color: #9EAA8C;
+    text-align: center;
+}
+
+.socialMedia {
+    width: 50px;
+    height: 50px;
+}
