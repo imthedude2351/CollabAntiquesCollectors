@@ -17,7 +17,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Spectral+SC&display=swap" rel="stylesheet">
     </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light">
       <a class="navbar-brand" href="#">Arnold's Antiques</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -31,25 +31,29 @@
           </div>
         </form>
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
+      
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Shop
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a>
+              <a class="dropdown-item" href="#">Jewelry</a>
+              <a class="dropdown-item" href="#">Fashion</a>
+              <a class="dropdown-item" href="#">Furniture</a>
+              <a class="dropdown-item" href="#">Electronics</a>
             </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Blog<span class="sr-only"></span></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{% url 'dashboard' %}">Dashboard<span class="sr-only"></span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact Us</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Sign In</a>
@@ -60,115 +64,91 @@
     </nav>
 
     <div class="container toppage">
-      <img src="https://i.imgur.com/0ciIAVr.jpg" class="img-fluid" alt="Responsive image">
+      <img src="https://i.imgur.com/kR1nYE0.png" class="img-fluid" alt="Responsive image">
       <div class="container toppageText">
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam, assumenda facilis. Nulla, est optio alias quo molestias minus sapiente, officiis ab saepe dolore similique reiciendis? Ullam, odio voluptate? Reiciendis, sunt?</p>
-        <div class="btn btn-dark">Call To Action</div>
+        <div class="btn btn-warning">Call To Action</div>
       </div> 
     </div>
 
-    <div class="d-flex flex-row justify-content-around">
-      <div class="p-2">          
-        <img class="threeCircles" src="https://i.imgur.com/9nCV6C7.jpg" alt="..." class="rounded-circle">
-      </div>
-      <div class="p-2">
-        <img class="threeCircles" src="https://i.imgur.com/9nCV6C7.jpg" alt="..." class="rounded-circle">
-      </div>
-      <div class="p-2">
-        <img class="threeCircles" src="https://i.imgur.com/9nCV6C7.jpg" alt="..." class="rounded-circle">
-      </div>
-    </div>
-    <div class="d-flex flex-row-reverse justify-content-around">
-      <div class="p-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-      <div class="p-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-      <div class="p-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-    </div>
+    <div class="mt-4 mb-4 container">
+      <div class="d-flex flex-row justify-content-around">
+        <div class="p-2">
+          <img class="threeCircles" src="https://i.imgur.com/Xuk7lZu.png" alt="..." class="rounded-circle">
+        </div>
+        <div class="p-2">          
+          <img class="threeCircles" src="https://i.imgur.com/xyXEQk0.png" alt="..." class="rounded-circle">
+        </div>
+        <div class="p-2">
+          <img class="threeCircles" src="https://i.imgur.com/4Chz828.png" alt="..." class="rounded-circle">
+        </div>
 
-    <div class="container justify-content-center">
+      </div>
+      <div class="d-flex flex-row-reverse justify-content-around">
+        <div class="p-2 circleText">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+        <div class="p-2 circleText">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+        <div class="p-2 circleText">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+      </div>
+
+    </div>
+    <div class="get container justify-content-center">
       <form method="post" action="{% url 'signup' %}">
         {% csrf_token %}
-        <h3>Get In The Know</h3>
+        <h3>Get in the Know</h3>
         <div class="form-group w-100">
           <label for="exampleInputEmail1">Full Name</label>
-          <input type="text" class="form-control" name="full_name" id="id_full_name" aria-describedby="emailHelp" placeholder="Enter full name..">
+          <input type="text" class="form-control" name="full_name" id="id_full_name" aria-describedby="emailHelp" placeholder="Enter full name..">        
         </div>
         <div class="form-group w-100">
-          <label for="exampleInputEmail1">Email</label>
+          <label for="exampleInputPassword1">Email Address</label>
           <input type="email" class="form-control" name="email" id="id_email" placeholder="Enter Email..">
         </div>
   
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="d-flex justify-content-center signUpbtn btn btn-warning">Sign Up</button>
       </form>
 
     </div>
 
-    <div class="container">
+    <div class="mt-5 mb-5 container">
       <h3>About Us</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab consequuntur quasi ipsum eius molestias voluptas aliquam, quaerat sunt. Unde voluptate laudantium similique, possimus sequi quis nam tempora. Dolores, repellat repellendus?</p>
+      <p class="bodyText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab consequuntur quasi ipsum eius molestias voluptas aliquam, quaerat sunt. Unde voluptate laudantium similique, possimus sequi quis nam tempora. Dolores, repellat repellendus?</p>
       <!-- <img src="https://i.imgur.com/VBNCcrU.jpg" alt=""> -->
     </div>
 
-    <div class="container testimonial-group">
+    <div class="shopContainer container testimonial-group">
+      <h3 class="p-1">Shop</h3>
       <div class="row text-center">
         <div class="card col-xs-4" style="width: 18rem;">
-          <img class="card-img-top" src="https://i.imgur.com/0ciIAVr.jpg" alt="Card image cap">
+          <img class="card-img-top" src="https://i.imgur.com/SJZ1UDz.png" alt="Card image cap">
         </div>
         <div class="card col-xs-4" style="width: 18rem;">
-          <img class="card-img-top" src="https://i.imgur.com/9nCV6C7.jpg" alt="Card image cap">
+          <img class="card-img-top" src="https://i.imgur.com/IMsiiKG.png" alt="Card image cap">
         </div>
         <div class="card col-xs-4" style="width: 18rem;">
-          <img class="card-img-top" src="https://i.imgur.com/gAiwMZm.jpg" alt="Card image cap">
+          <img class="card-img-top" src="https://i.imgur.com/XBX8YWQ.png" alt="Card image cap">
         </div>
-        <div class="col-xs-4">4</div>
-        <div class="col-xs-4">5</div>
-        <div class="col-xs-4">6</div>
-        <div class="col-xs-4">7</div>
-        <div class="col-xs-4">8</div>
-        <div class="col-xs-4">9</div>
+        <div class="card col-xs-4" style="width: 18rem;">
+          <img class="card-img-top" src="https://i.imgur.com/z00GX6q.png" alt="Card image cap">
+        </div>
       </div>
     </div>
 
-    
-<!-- <section class="work" section id=“work”>
-    <h2 class="section-title">Work</h2>
-    <div class="work__container bd-grid">
-        <div class="work__img">
-            <img src="https://i.imgur.com/0ciIAVr.jpg" alt="">
-        </div>
-        <div class="work__img">
-            <img src="https://i.imgur.com/9nCV6C7.jpg" alt="">
-        </div>
-        <div class="work__img">
-            <img src="https://i.imgur.com/WZP9zxe.png" alt="">
-        </div>
-        <div class="work__img">
-            <img src="https://i.imgur.com/gAiwMZm.jpg" alt="">
-        </div>
-        <div class="work__img">
-            <img src="https://i.imgur.com/B3m9Ghq.jpg" alt="">
-        </div>
-        <div class="work__img">
-            <img src="https://i.imgur.com/VBNCcrU.jpg" alt="">
-        </div>
+    <div class="mt-4 footerInfo container">
+      <h4>Visit</h4>
+      <hr>
+      <h4>Contact</h4>
+      <hr>
+      <h4>Back To Top</h4>
+      <hr>
+      <div class="d-flex mb-5 justify-content-center">
+        <img class="mr-4  socialMedia" src="https://i.imgur.com/Tdnug8N.png" alt="">
+        <img class="mr-4 socialMedia" src="https://i.imgur.com/DGEGqJK.png" alt="">
+        <img class="socialMedia" src="https://i.imgur.com/DwEJNrd.png" alt="">
+      </div>
     </div>
-</section> -->
-<!-- <form action="" method="POST">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input type="Submit" name="submit" value="Submit"/>
-</form>
-    {% if submitbutton == "Submit" %}
-    <h1> Your full name is {{ fullname }}</h1>
-    <h1> Your email is {{ emailvalue }} </h1>
-    {% endif %} -->
-
+  
 
     {% block content %} 
     {% endblock %}
-    <footer class="page-footer">
-      <div class="right">
-        All Rights Reserved, &copy; 2021 Antiques Collector &nbsp;
-      </div>
-    </footer>
   </body>
 </html>
