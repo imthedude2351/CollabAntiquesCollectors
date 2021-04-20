@@ -17,5 +17,6 @@ def index(request):
 def home(request):
     return render(request, 'base.html')
 
-def about(request):
-    return render(request, 'about.html')
+def dashboard(request):
+    return render(request, 'dashboard.html')
+
