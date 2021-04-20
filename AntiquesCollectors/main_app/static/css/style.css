@@ -92,7 +92,7 @@
     overflow: scroll;
     white-space: nowrap;
 }
-.testimonial-group > .row > .col-xs-4 {
+.testimonial-group > .row > .col-xs-4, .col-md-6 {
     display: inline-block;
     float: none;
     padding: 15px;
@@ -101,7 +101,7 @@
 }
   
   /* Decorations */
-.col-xs-4 { 
+.col-xs-4, .col-md-6 { 
     color: #fff; 
     font-size: 48px; 
     padding-bottom: 20px; 
