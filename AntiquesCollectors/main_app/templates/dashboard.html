@@ -89,6 +89,11 @@
 
 <div class="container testimonial-group">
   <h6>Members</h6>
+
+  {% for s in subs %}
+    <p>{{s.full_name}}</p>
+    <p>{{s.email}}</p>
+  {% endfor %}
   <div class="row text-center">
     <div class="card col-xs-4" style="width: 18rem;">
       <img class="card-img-top" src="https://i.imgur.com/0ciIAVr.jpg" alt="Card image cap">
