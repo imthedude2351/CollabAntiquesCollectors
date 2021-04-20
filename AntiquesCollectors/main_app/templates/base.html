@@ -34,7 +34,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#">Collections</a>
+            <a class="nav-link" href="#work">Collections</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Shop</a>
@@ -56,6 +56,41 @@
           </ul>
       </div>
 </nav>
+
+<section class="work" section id=“work”>
+    <h2 class="section-title">Work</h2>
+    <div class="work__container bd-grid">
+        <div class="work__img">
+            <img src="https://i.imgur.com/0ciIAVr.jpg" alt="">
+        </div>
+        <div class="work__img">
+            <img src="https://i.imgur.com/9nCV6C7.jpg" alt="">
+        </div>
+        <div class="work__img">
+            <img src="https://i.imgur.com/WZP9zxe.png" alt="">
+        </div>
+        <div class="work__img">
+            <img src="https://i.imgur.com/gAiwMZm.jpg" alt="">
+        </div>
+        <div class="work__img">
+            <img src="https://i.imgur.com/B3m9Ghq.jpg" alt="">
+        </div>
+        <div class="work__img">
+            <img src="https://i.imgur.com/VBNCcrU.jpg" alt="">
+        </div>
+    </div>
+</section>
+<form action="" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="Submit" name="submit" value="Submit"/>
+</form>
+    {% if submitbutton == "Submit" %}
+    <h1> Your full name is {{ fullname }}</h1>
+    <h1> Your email is {{ emailvalue }} </h1>
+    {% endif %}
+
+
     {% block content %} 
     {% endblock %}
     <footer class="page-footer">
